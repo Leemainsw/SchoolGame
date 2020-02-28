@@ -1,0 +1,16 @@
+#pragma once
+class CSprite
+{
+protected:
+	LPD3DXSPRITE m_Sprite;
+
+public:
+	bool Create(LPDIRECT3DDEVICE9 pD3DDevice);
+	void Draw(LPDIRECT3DTEXTURE9 pTex, const D3DXVECTOR3 cen, const D3DXVECTOR3 pos);
+	void Release();
+
+	CSprite();
+	CSprite(LPDIRECT3DDEVICE9 pD3DDevice);
+	virtual ~CSprite();
+};
+

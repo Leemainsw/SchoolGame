@@ -6,6 +6,14 @@
 #include <d3dx9.h>
 
 #include "SchoolGame.h"
+#include "CSprite.h"
+#include "CTexture.h"
+#include "CEntity.h"
+
+#pragma comment( lib, "d3d9.lib")
+#pragma comment( lib, "d3dx9.lib")
+#pragma comment(lib,"dinput8.lib")
+#pragma comment(lib,"dxguid.lib")
 
 #define MAX_LOADSTRING 100
 

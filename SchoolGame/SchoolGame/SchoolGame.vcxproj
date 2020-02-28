@@ -149,12 +149,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CEntity.h" />
+    <ClInclude Include="CSprite.h" />
+    <ClInclude Include="CTexture.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="SchoolGame.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CEntity.cpp" />
+    <ClCompile Include="CSprite.cpp" />
+    <ClCompile Include="CTexture.cpp" />
     <ClCompile Include="SchoolGame.cpp" />
   </ItemGroup>
   <ItemGroup>
