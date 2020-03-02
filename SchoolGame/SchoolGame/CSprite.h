@@ -1,7 +1,9 @@
 #pragma once
+
 class CSprite
 {
 protected:
+	//스프라이트 객체생성
 	LPD3DXSPRITE m_Sprite;
 
 public:

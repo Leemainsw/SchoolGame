@@ -1,13 +1,15 @@
-#include <d3d9.h>
-#include <d3dx9.h>
+#include <d3d9.h> //DirectX 헤더 추가1
+#include <d3dx9.h> //DirectX 헤더 추가2
 
 #include "CSprite.h"
 
 bool CSprite::Create(LPDIRECT3DDEVICE9 pD3DDevice)
 {
+	//에러코드
 	HRESULT hr = D3DXCreateSprite(pD3DDevice, &m_Sprite);
 	if (FAILED(hr))
 		return false;
+
 	return true;
 }
 
@@ -21,7 +23,7 @@ void CSprite::Draw(LPDIRECT3DTEXTURE9 pTex, const D3DXVECTOR3 cen, const D3DXVEC
 
 void CSprite::Release()
 {
-	if (m_Sprite != NULL) 
+	if (m_Sprite != NULL)
 	{
 		m_Sprite->Release();
 		m_Sprite = NULL;

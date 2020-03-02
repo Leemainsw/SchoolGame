@@ -1,5 +1,6 @@
 #pragma once
 
+
 class CTexture
 {
 protected:
@@ -7,8 +8,8 @@ protected:
 
 public:
 	bool Create(LPDIRECT3DDEVICE9 pD3DDevice, const TCHAR* filename);
-	
-	LPDIRECT3DTEXTURE9 GerTexture() const
+
+	LPDIRECT3DTEXTURE9 GetTexture() const
 	{
 		return m_pTexture;
 	}
@@ -18,6 +19,5 @@ public:
 	CTexture();
 	CTexture(LPDIRECT3DDEVICE9 pD3DDevice, const TCHAR* filename);
 	virtual ~CTexture();
-
 };
 

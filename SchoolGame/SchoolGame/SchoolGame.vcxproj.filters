@@ -36,6 +36,9 @@
     <ClInclude Include="CEntity.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="CInput.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SchoolGame.cpp">
@@ -48,6 +51,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="CEntity.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CInput.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

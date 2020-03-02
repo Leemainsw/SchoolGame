@@ -2,11 +2,12 @@
 #include <d3dx9.h>
 #include <map>
 #include <string>
-
 #include "CTexture.h"
+
 
 bool CTexture::Create(LPDIRECT3DDEVICE9 pD3DDevice, const TCHAR* filename)
 {
+
 	auto hr = D3DXCreateTextureFromFileEx(pD3DDevice, filename
 		, 0, 0, 0, 0
 		, D3DFMT_A8R8G8B8
@@ -24,6 +25,7 @@ bool CTexture::Create(LPDIRECT3DDEVICE9 pD3DDevice, const TCHAR* filename)
 	}
 	return true;
 }
+
 
 void CTexture::Release()
 {
