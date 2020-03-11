@@ -24,12 +24,11 @@ WCHAR szWindowClass[MAX_LOADSTRING];            // 기본 창 클래스 이름�
 
 // 이 코드 모듈에 포함된 함수의 선언을 전달합니다:
 ATOM                MyRegisterClass(HINSTANCE hInstance);
-BOOL                InitInstance(HINSTANCE, int, HWND);
+BOOL                InitInstance(HINSTANCE, int, HWND&);
 LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
 //INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
 
 //변수선언
-
 CInput* g_Input;
 
 CSprite* m_SchoolSprite; //학교 스프라이트
@@ -48,14 +47,14 @@ D3DXVECTOR3 HomeDir;
 D3DXVECTOR3 HeroDir;
 D3DXVECTOR3 TeacherDir;
 
-D3DXVECTOR3 SchoolPos = { 0.f,0.f,0.f };
-D3DXVECTOR3 HomePos = { 3.f,0.f,0.f };
+D3DXVECTOR3 SchoolPos = {730.f,240.f,0.f };
+D3DXVECTOR3 HomePos = { 10.f,240.f,0.f };
 D3DXVECTOR3 HeroPos = { 320.f, 440.f, 0.f };
 D3DXVECTOR3 TeacherPos;
 
 LPDIRECT3D9 g_pD3D;
 LPDIRECT3DDEVICE9 g_pD3DDevice;
-D3DCOLOR g_ClearColor = D3DCOLOR_XRGB(255, 0, 0);
+D3DCOLOR g_ClearColor = D3DCOLOR_XRGB(0, 0, 0);
 DWORD g_dwPrevTime = 0L;
 LPD3DXFONT g_Font;
 
@@ -87,7 +86,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         return FALSE;
     }
 
-    InitDirect3D(hWnd);
+    //InitDirect3D(hWnd);
 
     m_SchoolSprite = new CSprite(g_pD3DDevice);
     m_SchoolTexture = new CTexture(g_pD3DDevice, _T("School.bmp"));
@@ -171,7 +170,7 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
 //        이 함수를 통해 인스턴스 핸들을 전역 변수에 저장하고
 //        주 프로그램 창을 만든 다음 표시합니다.
 //
-BOOL InitInstance(HINSTANCE hInstance, int nCmdShow, HWND hWnd)
+BOOL InitInstance(HINSTANCE hInstance, int nCmdShow, HWND& hWnd)
 {
    hInst = hInstance; // 인스턴스 핸들을 전역 변수에 저장합니다.
 
@@ -182,6 +181,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow, HWND hWnd)
    {
       return FALSE;
    }
+
+   InitDirect3D(hWnd);
 
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
@@ -253,7 +254,7 @@ void Render() {
         m_HeroSprite->Draw(m_HeroTexture->GetTexture(), { 32.f, 32.f,0.f }, HeroPos);
         //m_TeacherSprite->Draw(m_TeacherTexture->GetTexture(), { 32.f, 32.f,0.f }, TeacherPos);
        
-        m_SchoolSprite->Draw(m_SchoolTexture->GetTexture(), { 240.f , 10.f, 0.f }, SchoolPos);
+        m_SchoolSprite->Draw(m_SchoolTexture->GetTexture(), { 10 , 240.f, 0.f }, SchoolPos);
         m_HomeSprite->Draw(m_HomeTexture->GetTexture(), { 10.f, 240.f ,0.f }, HomePos);
 
         RECT rc;

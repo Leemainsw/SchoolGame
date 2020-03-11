@@ -1,1 +1,3 @@
-﻿  SchoolGame.vcxproj -> E:\Leeyeseul\git\SchoolGame_git\SchoolGame\Debug\SchoolGame.exe
+﻿  SchoolGame.cpp
+  C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  SchoolGame.vcxproj -> E:\Leeyeseul\git\SchoolGame_git\SchoolGame\Debug\SchoolGame.exe
