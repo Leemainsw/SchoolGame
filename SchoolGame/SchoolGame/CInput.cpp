@@ -79,8 +79,8 @@ void CInput::GetInputDir(D3DXVECTOR3& vDir)
 {
 	vDir = { 0.f,0.f,0.f };
 
-	vDir.x += IsKeyPressed(DIK_LEFTARROW) ? -1.f : 0.f;
-	vDir.x += IsKeyPressed(DIK_RIGHTARROW) ? 1.f : 0.f;
+	vDir.y += IsKeyPressed(DIK_UPARROW) ? -1.f : 0.f;
+	vDir.y += IsKeyPressed(DIK_DOWNARROW) ? 1.f : 0.f;
 }
 
 bool CInput::IsSpaceKeyPressed()

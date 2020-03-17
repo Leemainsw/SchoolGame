@@ -47,9 +47,9 @@ D3DXVECTOR3 HomeDir;
 D3DXVECTOR3 HeroDir;
 D3DXVECTOR3 TeacherDir;
 
-D3DXVECTOR3 SchoolPos = {730.f,240.f,0.f };
+D3DXVECTOR3 SchoolPos = {1495.f,240.f,0.f };
 D3DXVECTOR3 HomePos = { 10.f,240.f,0.f };
-D3DXVECTOR3 HeroPos = { 320.f, 440.f, 0.f };
+D3DXVECTOR3 HeroPos = { 100.f, 440.f, 0.f };
 D3DXVECTOR3 TeacherPos;
 
 LPDIRECT3D9 g_pD3D;
@@ -61,7 +61,7 @@ LPD3DXFONT g_Font;
 //함수선언
 bool InitDirect3D(HWND hwnd);
 void Render();
-void ReleaseDirect3D();
+void ReleaseDirect3D(); 
 
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                      _In_opt_ HINSTANCE hPrevInstance,
@@ -229,7 +229,7 @@ bool InitDirect3D(HWND hwnd) {
     d3dpp.SwapEffect = D3DSWAPEFFECT_DISCARD;
     d3dpp.BackBufferFormat = D3DFMT_UNKNOWN;
     d3dpp.BackBufferCount = 1;
-    d3dpp.BackBufferWidth = 740;
+    d3dpp.BackBufferWidth = 1500;
     d3dpp.BackBufferHeight = 480;
 
     if (g_pD3D->CreateDevice(D3DADAPTER_DEFAULT
