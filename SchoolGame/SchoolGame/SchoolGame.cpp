@@ -76,6 +76,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     // 전역 문자열을 초기화합니다.
     LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
     LoadStringW(hInstance, IDC_SCHOOLGAME, szWindowClass, MAX_LOADSTRING);
+    //윈도우 클래스를 등록
     MyRegisterClass(hInstance);
 
     HWND hWnd = NULL;
@@ -85,8 +86,6 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     {
         return FALSE;
     }
-
-    //InitDirect3D(hWnd);
 
     m_SchoolSprite = new CSprite(g_pD3DDevice);
     m_SchoolTexture = new CTexture(g_pD3DDevice, _T("School.bmp"));
@@ -170,6 +169,8 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
 //        이 함수를 통해 인스턴스 핸들을 전역 변수에 저장하고
 //        주 프로그램 창을 만든 다음 표시합니다.
 //
+
+//CreateWindow 함수를 호출하여 윈도우를 만든다
 BOOL InitInstance(HINSTANCE hInstance, int nCmdShow, HWND& hWnd)
 {
    hInst = hInstance; // 인스턴스 핸들을 전역 변수에 저장합니다.
